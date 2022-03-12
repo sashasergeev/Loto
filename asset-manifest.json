@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/rocknblock-test/static/css/main.f1668218.css",
-    "main.js": "/rocknblock-test/static/js/main.ecd3c67d.js",
+    "main.js": "/rocknblock-test/static/js/main.2cf33769.js",
     "index.html": "/rocknblock-test/index.html",
     "main.f1668218.css.map": "/rocknblock-test/static/css/main.f1668218.css.map",
-    "main.ecd3c67d.js.map": "/rocknblock-test/static/js/main.ecd3c67d.js.map"
+    "main.2cf33769.js.map": "/rocknblock-test/static/js/main.2cf33769.js.map"
   },
   "entrypoints": [
     "static/css/main.f1668218.css",
-    "static/js/main.ecd3c67d.js"
+    "static/js/main.2cf33769.js"
   ]
 }
