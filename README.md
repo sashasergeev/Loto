@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# Тестовое задание rocknblock
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Задача: Требуется реализовать логику игры лото.
 
-## Available Scripts
+### Правила игры: У игры есть 2 поля: в первом поле 19 клеток, во втором 2 клетки. От участника лотереи требуется отметить в первом поле 8 цифр, во втором 1 цифру.
 
-In the project directory, you can run:
+Нужно также сравнить отмеченные пользователем числа с двумя случайно сгенерированными, в соответствиями с правилами игры, массивами чисел (8 чисел в первом массиве, 1 число во втором).
+В случае совпадения 4-х чисел в первом поле или 3-х чисел и более в первом поле и 1-го числа втором, пользователь считается победителем лотереи и получает причитающиеся ему лавры (ничего не получает).
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Что мы хотим увидеть:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Аккуратный, чистый код. Использование линтеров (eslint) приветствуется.
 
-### `yarn test`
+React любой предпочитаемой версии. Для быстрой первоначальной настройки проекта можно использовать Create React App.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Минимальную визуализацию описанного выше.
 
-### `yarn build`
+В качестве вёрстки, возможно использовать вложенный макет. Если, конечно, вы будете её делать :-)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Задания со звездочкой.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Это не обязательная часть, но мы будем рады, если вы её выполните. Если нет, то мы просто зададим похожие вопросы уже на собеседовании.
 
-### `yarn eject`
+Сделать адаптивную mobile-first вёрстку, условно приближенную к макету. Flexbox layout. IE11 – хорошо, Safari – хорошо, но оба не обязательно.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Реализовать генерацию случайно выбранных полей в билете по правилам лотереи. Все это происходит после нажатия на значок волшебной палочки.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Реализовать логику отправки выбранных чисел на сервер по любому URL. Предлагаем использовать фейковый URL /rock-block, чтобы не иметь дела с CORS. Отправка должна происходить после нажатия на кнопку «Показать результат». В данных отправки должен быть следующий объект:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```json
+{
+  selectedNumber: {
+    firstField: [ *first field numbers* ],
+    secondField: [ *second field numbers* ]
+  },
+  isTicketWon: *Boolean(true||false)*
+  }
+}
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Сразу предупредим – нужно предусмотреть ситуацию, что в ответ придет код-ответ не «200 OK», а любой другой. В таком случае требуется отправлять запрос еще два раза с интервалом 2 секунды.
 
-## Learn More
+Если ответ «200 OK» так и не пришел, то нужно показать какое-либо уведомление об ошибке. Данный пункт подразумевает знание понятия рекурсии.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Чем больше пунктов вы сделаете тем лучше, так как покажет большее количество знаний, которыми вы обладаете. Но мы не призываем вас делать их все.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Сроки: Мы не ограничиваем вас по времени, но по нашим подсчетам на тестовое уйдет 5-6 часов.

@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Ticket from "./components/Ticket";
 
-function App() {
+const App = (): JSX.Element => {
+  const [tickets, setTickets] = useState([1]);
+  const addTicket = () => {
+    setTickets([...tickets, tickets.length + 1]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* LIST OF TICKETS */}
+      {tickets.map((e) => (
+        <Ticket key={`ticket-${e}`} ticketID={e} />
+      ))}
+      {/* ADD TICKET BUTTON */}
+      <button onClick={addTicket} className="AddButton">
+        Добавить билет
+      </button>
     </div>
   );
-}
+};
 
 export default App;

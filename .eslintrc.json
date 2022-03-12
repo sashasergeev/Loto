@@ -1,0 +1,25 @@
+{
+  "rules": {
+    "react/prop-types": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-floating-promises": "off"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "root": true,
+  "plugins": ["react", "@typescript-eslint"],
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "settings": { "react": { "version": "detect" } }
+}
