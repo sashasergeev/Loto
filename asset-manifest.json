@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/roclnblock-test/static/css/main.f1668218.css",
+    "main.js": "/roclnblock-test/static/js/main.172e6dca.js",
+    "index.html": "/roclnblock-test/index.html",
+    "main.f1668218.css.map": "/roclnblock-test/static/css/main.f1668218.css.map",
+    "main.172e6dca.js.map": "/roclnblock-test/static/js/main.172e6dca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1668218.css",
+    "static/js/main.172e6dca.js"
+  ]
+}
