@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/rocknblock_test-task/static/css/main.f1668218.css",
-    "main.js": "/rocknblock_test-task/static/js/main.172e6dca.js",
-    "index.html": "/rocknblock_test-task/index.html",
-    "main.f1668218.css.map": "/rocknblock_test-task/static/css/main.f1668218.css.map",
-    "main.172e6dca.js.map": "/rocknblock_test-task/static/js/main.172e6dca.js.map"
+    "main.css": "/rocknblock-test/static/css/main.f1668218.css",
+    "main.js": "/rocknblock-test/static/js/main.ecd3c67d.js",
+    "index.html": "/rocknblock-test/index.html",
+    "main.f1668218.css.map": "/rocknblock-test/static/css/main.f1668218.css.map",
+    "main.ecd3c67d.js.map": "/rocknblock-test/static/js/main.ecd3c67d.js.map"
   },
   "entrypoints": [
     "static/css/main.f1668218.css",
-    "static/js/main.172e6dca.js"
+    "static/js/main.ecd3c67d.js"
   ]
 }
