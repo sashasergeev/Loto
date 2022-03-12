@@ -22,7 +22,7 @@ const Ticket = ({ ticketID }: { ticketID: number }) => {
         {!showResult && (
           <img
             onClick={() => chooseRandom()}
-            src="magic-stick.png"
+            src="/rocknblock-test/magic-stick.png"
             alt="magic stick"
           />
         )}
