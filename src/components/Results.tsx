@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import useResultLogic, { NumIsSucc } from "../hooks/useResultLogic";
-import useApiCall from "../hooks/useApiCall";
+import useApiCall, { reqEnum } from "../hooks/useApiCall";
 import { SelectedT } from "../hooks/useTicketLogic";
 
 export interface ResultsI {
@@ -17,12 +17,12 @@ export type LotoDataResutsT = {
 
 const Results = (props: ResultsI) => {
   const { res, resOverlap, win } = useResultLogic({ ...props });
-  const { sendResultToServer, reqStatus } = useApiCall();
+  const { makeRequest, reqStatus } = useApiCall();
 
   useEffect(() => {
     if (win !== "loading") {
       // request options
-      const url = "https://blocknroll.com/rock-block";
+      const url = "https://pokeapi.co/api/v2/pokemonsafa/sfasfditto";
       const { firstField, secondField } = props.selected;
       const data: LotoDataResutsT = {
         selectedNumber: {
@@ -33,7 +33,7 @@ const Results = (props: ResultsI) => {
       };
       // make request
       (async function () {
-        await sendResultToServer(url, data);
+        await makeRequest(url, reqEnum.post, data);
       })();
     }
   }, [win]);
