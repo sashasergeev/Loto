@@ -1,4 +1,4 @@
-# Тестовое задание rocknblock
+# Loto
 
 [**Ссылка на деплой**](https://sashasergeev.github.io/rocknblock-test/)
 
